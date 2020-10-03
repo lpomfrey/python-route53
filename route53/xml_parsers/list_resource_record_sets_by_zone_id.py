@@ -1,5 +1,5 @@
 from route53.exceptions import Route53Error
-from route53.resource_record_set import AResourceRecordSet, AAAAResourceRecordSet, CNAMEResourceRecordSet, MXResourceRecordSet, NSResourceRecordSet, PTRResourceRecordSet, SOAResourceRecordSet, SPFResourceRecordSet, SRVResourceRecordSet, TXTResourceRecordSet
+from route53.resource_record_set import AResourceRecordSet, AAAAResourceRecordSet, CNAMEResourceRecordSet, MXResourceRecordSet, NSResourceRecordSet, PTRResourceRecordSet, SOAResourceRecordSet, SPFResourceRecordSet, SRVResourceRecordSet, TXTResourceRecordSet, CAAResourceRecordSet
 
 # Maps ResourceRecordSet subtag names to kwargs in RRSet subclasses.
 RRSET_TAG_TO_KWARG_MAP = {
@@ -22,6 +22,7 @@ RRSET_TYPE_TO_RSET_SUBCLASS_MAP = {
     'SPF': SPFResourceRecordSet,
     'SRV': SRVResourceRecordSet,
     'TXT': TXTResourceRecordSet,
+    'CAA': CAAResourceRecordSet,
 }
 
 def parse_rrset_alias(e_alias):

@@ -326,3 +326,14 @@ class TXTResourceRecordSet(ResourceRecordSet):
     """
 
     rrset_type = 'TXT'
+
+
+class CAAResourceRecordSet(ResourceRecordSet):
+    """
+    Specific CAA record class. Create these via
+    :py:meth:`HostedZone.create_txt_record <route53.hosted_zone.HostedZone.create_txt_record>`.
+    Retrieve them via
+    :py:meth:`HostedZone.record_sets <route53.hosted_zone.HostedZone.record_sets>`.
+    """
+
+    rrset_type = 'CAA'
